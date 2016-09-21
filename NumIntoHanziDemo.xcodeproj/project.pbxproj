@@ -15,6 +15,7 @@
 		44F4DCBE1D9265D70056FC58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F4DCBC1D9265D70056FC58 /* LaunchScreen.storyboard */; };
 		44F4DCC91D9265D70056FC58 /* NumIntoHanziDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F4DCC81D9265D70056FC58 /* NumIntoHanziDemoTests.m */; };
 		44F4DCD41D9265D70056FC58 /* NumIntoHanziDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F4DCD31D9265D70056FC58 /* NumIntoHanziDemoUITests.m */; };
+		44F4DCE41D92660F0056FC58 /* NSString+translation.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F4DCE31D92660F0056FC58 /* NSString+translation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		44F4DCCF1D9265D70056FC58 /* NumIntoHanziDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumIntoHanziDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F4DCD31D9265D70056FC58 /* NumIntoHanziDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumIntoHanziDemoUITests.m; sourceTree = "<group>"; };
 		44F4DCD51D9265D70056FC58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44F4DCE21D92660F0056FC58 /* NSString+translation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+translation.h"; sourceTree = "<group>"; };
+		44F4DCE31D92660F0056FC58 /* NSString+translation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+translation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		44F4DCAD1D9265D70056FC58 /* NumIntoHanziDemo */ = {
 			isa = PBXGroup;
 			children = (
+				44F4DCE11D92660F0056FC58 /* category */,
 				44F4DCB11D9265D70056FC58 /* AppDelegate.h */,
 				44F4DCB21D9265D70056FC58 /* AppDelegate.m */,
 				44F4DCB41D9265D70056FC58 /* ViewController.h */,
@@ -138,6 +142,15 @@
 				44F4DCD51D9265D70056FC58 /* Info.plist */,
 			);
 			path = NumIntoHanziDemoUITests;
+			sourceTree = "<group>";
+		};
+		44F4DCE11D92660F0056FC58 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				44F4DCE21D92660F0056FC58 /* NSString+translation.h */,
+				44F4DCE31D92660F0056FC58 /* NSString+translation.m */,
+			);
+			path = category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +286,7 @@
 				44F4DCB61D9265D70056FC58 /* ViewController.m in Sources */,
 				44F4DCB31D9265D70056FC58 /* AppDelegate.m in Sources */,
 				44F4DCB01D9265D70056FC58 /* main.m in Sources */,
+				44F4DCE41D92660F0056FC58 /* NSString+translation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
