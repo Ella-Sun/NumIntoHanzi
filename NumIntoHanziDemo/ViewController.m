@@ -32,6 +32,7 @@
 //    textField.backgroundColor = [UIColor cyanColor];
     textField.textAlignment = NSTextAlignmentRight;
     textField.keyboardType = UIKeyboardTypeDecimalPad;
+    textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     textField.borderStyle = UITextBorderStyleLine;
     textField.delegate = self;
     [textField addTarget:self action:@selector(textEditingChanged:) forControlEvents:UIControlEventEditingChanged];
@@ -57,35 +58,37 @@
  *  4.前几位不能出现连续的0，例：0000087
  *
  */
-//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-//    
-//    NSLog(@"string------%@",string);
-//    NSLog(@"textField******%@",textField.text);
-//
-//    NSUInteger nDotLoc = [textField.text rangeOfString:@"."].location;
+/*
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     
-//    if ([string isEqualToString:@"."]) {
-//        //1.首个字符不能是“.”
-//        if (textField.text.length == 0) {
-//            [self showError:@"亲，第一个数字不能为小数点"];
-//            return NO;
-//        }
-        //2.限制只能输入一个小数点
-//        if (NSNotFound != nDotLoc) {
-//            [self showError:@"亲，您已经输入过小数点了"];
-//            return NO;
-//        }
-//    }
+    NSLog(@"string------%@",string);
+    NSLog(@"textField******%@",textField.text);
+
+    NSUInteger nDotLoc = [textField.text rangeOfString:@"."].location;
+    
+    if ([string isEqualToString:@"."]) {
+        //1.首个字符不能是“.”
+        if (textField.text.length == 0) {
+            [self showError:@"亲，第一个数字不能为小数点"];
+            return NO;
+        }
+//        2.限制只能输入一个小数点
+        if (NSNotFound != nDotLoc) {
+            [self showError:@"亲，您已经输入过小数点了"];
+            return NO;
+        }
+    }
     
     
-    //3.有小数点时，不能超过小数点后两位
-//    if (NSNotFound != nDotLoc && range.location > nDotLoc + 2) {
-//        [self showError:@"亲，您最多输入两位小数"];
-//        return NO;
-//    }
-//    
-//    return YES;
-//}
+//    3.有小数点时，不能超过小数点后两位
+    if (NSNotFound != nDotLoc && range.location > nDotLoc + 2) {
+        [self showError:@"亲，您最多输入两位小数"];
+        return NO;
+    }
+    
+    return YES;
+}
+*/
 
 - (void)textEditingChanged:(UITextField *)sender {
 //    NSLog(@"%@",sender.text);

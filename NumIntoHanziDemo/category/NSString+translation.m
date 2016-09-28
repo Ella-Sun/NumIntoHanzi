@@ -106,6 +106,10 @@
         [sums addObject:sum];
     }
     
+    if (sums.count > 1 && [sums.lastObject isEqualToString:@"零"]) {
+        [sums removeLastObject];
+    }
+    
     if (isPoint && availStr.length > 0) {
         
         [sums addObject:@"点"];
